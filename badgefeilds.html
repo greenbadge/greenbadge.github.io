@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href=
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" >
+    </script>
+      
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" >
+    </script>
+</head>
+<body>
+    <Label for="name">Name:</Label>
+    <input name="name" id="name" type="text" placeholder="Input Name">
+    <br><br>
+    <Label for="idNumber">ID Number: </Label>
+    <input id="idNumber" type="text" placeholder="Student ID">
+    <br><br>
+    <label for="month">Date of Birth:</label>
+    <select name="month" id="bd_month">
+        <option value = " "> </option>
+        <option value="Jan">Jan</option>
+        <option value="Feb">Feb</option>
+        <option value="Mar">Mar</option>
+        <option value="Apr">Apr</option>
+        <option value="May">May</option>
+        <option value="Jun">Jun</option>
+        <option value="Jul">Jul</option>
+        <option value="Aug">Aug</option>
+        <option value="Sep">Sep</option>
+        <option value="Oct">Oct</option>
+        <option value="Nov">Nov</option>
+        <option value="Dec">Dec</option>
+    </select>
+    <select name="day" id= "bd_day"> 
+        <option value=" "> </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <br><br>
+    <p> By generating a badge, you agree and acknowledge the <a href="ToU.html">terms of use.</a> </p>
+    <br>
+    <button onclick="load_badge()">Load Badge</button>
+
+</body>
+<script>
+    function load_badge() {
+        var name = document.getElementById('name').value;
+        var number = document.getElementById('idNumber').value;
+        var bdMonth = document.getElementById('bd_month').value;
+        var bdDay = document.getElementById('bd_day').value;
+            url = 'badge.html?name=' + encodeURIComponent(name) + '&number=#' + encodeURIComponent(number) + '&dob=' + encodeURIComponent(bdMonth) + "%20" + encodeURIComponent(bdDay);
+        
+    document.location.href = url;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<style>
+</style>
+<div style = "z-index: -1" id="quarantineBadge" class="badge-Green">
+    <script src="badge.js"></script>
+    <div style="position: fixed; top: 0; left: 0; width: 100vw; z-index: 9999;">
+        <button class="button"><i class="fa fa-close"></i></button>
+    </div>
+
+    <p style="margin: 0 0 10px">Clearance Status</p>
+    <h1 style="margin-top: -20px; font-size: 2.75em;">Cleared</h1>
+    <div id="now" style="font-size: 1.4em"><span id="now"></span></span></div>
+    <div id="patInfo" class="row text-center" style="margin-top: 15px;">
+            <div class="col-xs-12">
+                <img id="patImage" src="pfp.png" alt="Patient Image" style="max-width: 170px; margin-top: -15px;">
+            </div>
+        <div class="col-xs-12">
+            <h3 id="badgename" class="mb-0" style="margin-top: 4px;">
+                    <strong><span id="name"></span></strong>
+            </h3>
+        </div>
+        <div class="col-xs-12">
+            <span id="badgedob" class="ml-2"></span>
+        </div>
+        <div class="col-xs-12">
+                <span id="number"></span>                
+        </div>
+    </div>
+    <div id="badgeqr" class="mt-2">
+        <img src="badge_qr.png">
+    </div>
+                <div id="next" style="font-size: 0.8em">Next Survey Due: <span id="tomorrow"></span></div>
+                <div style="font-size: 0.8em">Compliant with Standard Requirements</div>
+<script src="badge.js"></script>
+</div>
+
+</html>
